@@ -21,6 +21,7 @@ class FirstViewController: UIViewController {
             try sock.bindToPort(54545)
             try sock.enableBroadcast(true)
             try sock.connectToHost("255.255.255.255", onPort: 54545)
+            try sock.receiveWithTimeout(-1, tag: 0)
         } catch {
             print("error")
         }
