@@ -15,6 +15,9 @@
 		8996B3241CEA99820093D1D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8996B3221CEA99820093D1D6 /* LaunchScreen.storyboard */; };
 		8996B32F1CEA99820093D1D6 /* Clutch_RealTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8996B32E1CEA99820093D1D6 /* Clutch_RealTimeTests.swift */; };
 		8996B33A1CEA99820093D1D6 /* Clutch_RealTimeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8996B3391CEA99820093D1D6 /* Clutch_RealTimeUITests.swift */; };
+		8996B34D1CEAB08F0093D1D6 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 8996B34C1CEAB08F0093D1D6 /* Cartfile */; };
+		8996B34F1CEAB19B0093D1D6 /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8996B34E1CEAB19B0093D1D6 /* CocoaAsyncSocket.framework */; };
+		8996B3501CEAB19B0093D1D6 /* CocoaAsyncSocket.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8996B34E1CEAB19B0093D1D6 /* CocoaAsyncSocket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		8996B3511CEAB19B0093D1D6 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8996B3501CEAB19B0093D1D6 /* CocoaAsyncSocket.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		8996B3141CEA99810093D1D6 /* Clutch RealTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Clutch RealTime.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8996B3171CEA99820093D1D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +67,8 @@
 		8996B3391CEA99820093D1D6 /* Clutch_RealTimeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clutch_RealTimeUITests.swift; sourceTree = "<group>"; };
 		8996B33B1CEA99820093D1D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8996B3471CEA9A9A0093D1D6 /* Clutch RealTime.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Clutch RealTime.entitlements"; sourceTree = "<group>"; };
+		8996B34C1CEAB08F0093D1D6 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		8996B34E1CEAB19B0093D1D6 /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaAsyncSocket.framework; path = Carthage/Build/iOS/CocoaAsyncSocket.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8996B34F1CEAB19B0093D1D6 /* CocoaAsyncSocket.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +100,8 @@
 		8996B30B1CEA99810093D1D6 = {
 			isa = PBXGroup;
 			children = (
+				8996B34E1CEAB19B0093D1D6 /* CocoaAsyncSocket.framework */,
+				8996B34C1CEAB08F0093D1D6 /* Cartfile */,
 				8996B3161CEA99820093D1D6 /* Clutch RealTime */,
 				8996B32D1CEA99820093D1D6 /* Clutch RealTimeTests */,
 				8996B3381CEA99820093D1D6 /* Clutch RealTimeUITests */,
@@ -140,6 +162,8 @@
 				8996B3101CEA99810093D1D6 /* Sources */,
 				8996B3111CEA99810093D1D6 /* Frameworks */,
 				8996B3121CEA99810093D1D6 /* Resources */,
+				8996B3511CEAB19B0093D1D6 /* Embed Frameworks */,
+				8996B3521CEAB1C40093D1D6 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -246,6 +270,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8996B34D1CEAB08F0093D1D6 /* Cartfile in Resources */,
 				8996B3241CEA99820093D1D6 /* LaunchScreen.storyboard in Resources */,
 				8996B3211CEA99820093D1D6 /* Assets.xcassets in Resources */,
 				8996B31F1CEA99820093D1D6 /* Main.storyboard in Resources */,
@@ -267,6 +292,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8996B3521CEAB1C40093D1D6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/CocoaAsyncSocket.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8996B3101CEA99810093D1D6 /* Sources */ = {
@@ -421,6 +463,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Clutch RealTime/Clutch RealTime.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Clutch RealTime/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ClutchPerformance.Clutch-RealTime";
@@ -434,6 +480,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Clutch RealTime/Clutch RealTime.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Clutch RealTime/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ClutchPerformance.Clutch-RealTime";

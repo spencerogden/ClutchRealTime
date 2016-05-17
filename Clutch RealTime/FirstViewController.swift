@@ -7,14 +7,30 @@
 //
 
 import UIKit
+//import Cocoa
+import CocoaAsyncSocket
 
 class FirstViewController: UIViewController {
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let sock:AsyncUdpSocket = AsyncUdpSocket(delegate: self)
+        do{
+            try sock.bindToPort(54545)
+            try sock.enableBroadcast(true)
+            try sock.connectToHost("255.255.255.255", onPort: 54545)
+        } catch {
+            print("error")
+        }
+        print("View Loaded and socket setup")
     }
 
+    func udpSocket(sock:AsyncUdpSocket!,didReceiveData data: NSData!){
+        print(data)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -22,4 +38,3 @@ class FirstViewController: UIViewController {
 
 
 }
-
