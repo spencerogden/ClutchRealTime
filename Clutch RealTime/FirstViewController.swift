@@ -11,25 +11,31 @@ import UIKit
 import CocoaAsyncSocket
 
 class FirstViewController: UIViewController {
-
+    var sock:AsyncUdpSocket?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        let sock:AsyncUdpSocket = AsyncUdpSocket(delegate: self)
+        if (sock == nil) {
+            sock = AsyncUdpSocket(delegate: self)
+        }
+        
         do{
-            try sock.bindToPort(54545)
-            try sock.enableBroadcast(true)
-            try sock.connectToHost("255.255.255.255", onPort: 54545)
-            try sock.receiveWithTimeout(-1, tag: 0)
+            try sock!.bindToPort(9000)
+            //try sock.enableBroadcast(true)
+            sock!.receiveWithTimeout(-1,tag: 0)
         } catch {
             print("error")
         }
         print("View Loaded and socket setup")
     }
 
-    func udpSocket(sock:AsyncUdpSocket!,didReceiveData data: NSData!){
-        print(data)
+    func onUdpSocket(thissock:AsyncUdpSocket!,
+                     didReceiveData data: NSData,
+                     withTag tag: CLong,
+                     fromHost host:NSString,
+                     port:UInt16){
+        print(NSString(data: data, encoding: NSASCIIStringEncoding)!)
+        thissock.receiveWithTimeout(-1, tag: 0)
     }
     
     override func didReceiveMemoryWarning() {
