@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8928F50B1CF3E298001E6D9E /* Boat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8928F50A1CF3E298001E6D9E /* Boat.swift */; };
 		8996B3181CEA99820093D1D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8996B3171CEA99820093D1D6 /* AppDelegate.swift */; };
 		8996B31A1CEA99820093D1D6 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8996B3191CEA99820093D1D6 /* FirstViewController.swift */; };
 		8996B31C1CEA99820093D1D6 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8996B31B1CEA99820093D1D6 /* SecondViewController.swift */; };
@@ -52,6 +53,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8928F50A1CF3E298001E6D9E /* Boat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Boat.swift; sourceTree = "<group>"; };
 		8996B3141CEA99810093D1D6 /* Clutch RealTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Clutch RealTime.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8996B3171CEA99820093D1D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8996B3191CEA99820093D1D6 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				8996B3201CEA99820093D1D6 /* Assets.xcassets */,
 				8996B3221CEA99820093D1D6 /* LaunchScreen.storyboard */,
 				8996B3251CEA99820093D1D6 /* Info.plist */,
+				8928F50A1CF3E298001E6D9E /* Boat.swift */,
 			);
 			path = "Clutch RealTime";
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				8996B31C1CEA99820093D1D6 /* SecondViewController.swift in Sources */,
 				8996B3181CEA99820093D1D6 /* AppDelegate.swift in Sources */,
 				8996B31A1CEA99820093D1D6 /* FirstViewController.swift in Sources */,
+				8928F50B1CF3E298001E6D9E /* Boat.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,6 +560,7 @@
 				8996B3401CEA99820093D1D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8996B3411CEA99820093D1D6 /* Build configuration list for PBXNativeTarget "Clutch RealTimeTests" */ = {
 			isa = XCConfigurationList;
@@ -564,6 +569,7 @@
 				8996B3431CEA99820093D1D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8996B3441CEA99820093D1D6 /* Build configuration list for PBXNativeTarget "Clutch RealTimeUITests" */ = {
 			isa = XCConfigurationList;
@@ -572,6 +578,7 @@
 				8996B3461CEA99820093D1D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
