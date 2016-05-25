@@ -7,14 +7,36 @@
 //
 
 import UIKit
+import CocoaAsyncSocket
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    var sock:AsyncUdpSocket?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        if (sock == nil) {
+            sock = AsyncUdpSocket(delegate: self)
+        }
+
+        do{
+            try sock!.bindToPort(9000)
+            sock!.receiveWithTimeout(-1,tag: 0)
+        } catch {
+            print("error")
+        }
         return true
+    }
+    
+    func onUdpSocket(thissock:AsyncUdpSocket!,
+                     didReceiveData data: NSData,
+                     withTag tag: CLong,
+                     fromHost host:NSString,
+                     port:UInt16){
+        print(NSString(data: data, encoding: NSASCIIStringEncoding)!)
+        thissock.receiveWithTimeout(-1, tag: 0)
     }
 
     func applicationWillResignActive(application: UIApplication) {
